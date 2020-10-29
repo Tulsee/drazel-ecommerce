@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework import status, viewsets
+from .seializers import BeerSerializer
 
-# Create your views here.
+from .models import Beer
+
+
+class BeerProductViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Beer.objects.all()
+    serializer_class = BeerSerializer
