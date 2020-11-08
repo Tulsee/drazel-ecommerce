@@ -5,7 +5,7 @@ from .beerChoices import BEER_COUNTRY_CHOICES, BEER_ABV_CHOICES, BEER_BRAND_CHOI
 def beer_images(instance, filename):
     return 'beer/{file_name}'.format(file_name=filename)
 
-
+ 
 class Beer(models.Model):
     name = models.CharField(max_length=200)
     category = models.CharField(
